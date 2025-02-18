@@ -86,6 +86,6 @@ def incremental_learning(model, train_dataset, train_target, test_dataset, test_
         accuracy = evaluate(model, test_loader, device)
         accuracies.append(accuracy)
         print(f"Task {task+1}: Accuracy Test = {accuracy:.2f}%")
-
+        torch.save(model.state_dict(), netname = os.path.join('./src', 'network_{:s}.pth'.format(tag))
     return accuracies
 
