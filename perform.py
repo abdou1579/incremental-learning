@@ -38,8 +38,8 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 root_dir = './data'
 
-train_dataset = datasets.GTSRB(root=root_dir, split='train', download=False, transform=transform_train_2)
-test_dataset = datasets.GTSRB(root=root_dir, split='test', download=False, transform=transform_test_2)
+train_dataset = datasets.GTSRB(root=root_dir, split='train', download=True, transform=transform_train_2)
+test_dataset = datasets.GTSRB(root=root_dir, split='test', download=True, transform=transform_test_2)
 
 print(f"Train dataset contains {len(train_dataset)} images")
 print(f"Test dataset contains {len(test_dataset)} images")
